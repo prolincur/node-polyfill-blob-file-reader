@@ -2,6 +2,14 @@
 
 Provides Polyfill of FileReader and Blob on Node
 
+# Setup
+
+```
+npm i node-polyfill-blob-file-reader
+
+yarn add node-polyfill-blob-file-reader
+```
+
 # Example Usage
 
 ```

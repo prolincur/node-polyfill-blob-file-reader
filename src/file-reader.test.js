@@ -1,4 +1,9 @@
-import { Blob, FileReader } from './index.js'
+/*
+ * Copyright (c) 2020-23 Prolincur Technologies LLP.
+ * All Rights Reserved.
+ */
+
+import { Blob, FileReader } from './file-reader.js'
 import { Blob as NodeBlob } from 'buffer'
 
 class Reader extends FileReader {

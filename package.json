@@ -2,8 +2,17 @@
   "name": "node-polyfill-blob-file-reader",
   "version": "1.0.0",
   "description": "Polyfill for node - provides FileReader and Blob",
-  "repository": "https://github.com/prolincur/node-polyfill-blob-file-reader.git",
-  "author": "Sourabh Soni <https://prolincur.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/prolincur/node-polyfill-blob-file-reader.git"
+  },
+  "bugs": {
+    "url": "https://github.com/prolincur/node-polyfill-blob-file-reader/issues"
+  },
+  "author": "Prolincur Technologies LLP <https://prolincur.com>",
+  "contributors": [
+    "Sourabh Soni<https://prolincur.com>"
+  ],
   "license": "MIT",
   "type": "module",
   "main": "index.js",
@@ -13,18 +22,23 @@
     "polyfill",
     "nodejs"
   ],
+  "files": [
+    "build"
+  ],
   "scripts": {
     "prepare": "husky install",
     "changelog": "standard-version --tag-prefix=",
-    "build": "node index.js",
-    "dev": "nodemon index.js",
-    "test": "yarn node --experimental-vm-modules $(yarn bin jest)",
+    "build": "rm -rf build && webpack --config ./webpack.config.js",
+    "start": "nodemon index.js",
+    "test": "yarn build && yarn node --experimental-vm-modules $(yarn bin jest)",
     "lint": "eslint --fix --ext .js,.ts src",
     "prettier": "prettier src/*.js --write"
   },
   "devDependencies": {
+    "@babel/core": "^7.21.4",
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
+    "babel-loader": "^9.1.2",
     "eslint": "^7.1.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-config-standard": "^14.1.1",
@@ -39,7 +53,10 @@
     "jest": "^29.5.0",
     "nodemon": "^2.0.22",
     "prettier": "^2.8.7",
-    "standard-version": "^9.5.0"
+    "standard-version": "^9.5.0",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-node-externals": "^3.0.0"
   },
   "dependencies": {
     "eventtarget": "^0.1.0",

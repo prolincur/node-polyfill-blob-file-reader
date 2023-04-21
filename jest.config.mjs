@@ -1,4 +1,9 @@
 /*
+ * Copyright (c) 2020-23 Prolincur Technologies LLP.
+ * All Rights Reserved.
+ */
+
+/*
  * For a detailed explanation regarding each configuration property, visit:
  * https://jestjs.io/docs/configuration
  */
