@@ -1,6 +1,6 @@
 {
   "name": "node-polyfill-blob-file-reader",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Polyfill for node - provides FileReader and Blob",
   "repository": {
     "type": "git",
