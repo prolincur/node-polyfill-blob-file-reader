@@ -1,0 +1,14 @@
+node_modules/
+*/node_modules
+npm-debug.log
+yarn-error.log
+.DS_Store
+.env
+build/
+dist/
+.secret-*
+**.sample
+yarn-error.log
+public/
+*.log
+coverage/
