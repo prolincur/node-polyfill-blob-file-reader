@@ -5,7 +5,7 @@
 
 import { Blob, FileReader } from './file-reader.js'
 
-global.Blob = global.Blob || Blob
-global.FileReader = global.FileReader || FileReader
+if (!global.Blob) global.Blob = Blob
+if (!global.FileReader) global.FileReader = FileReader
 
 export { Blob, FileReader }

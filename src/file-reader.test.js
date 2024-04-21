@@ -3,8 +3,8 @@
  * All Rights Reserved.
  */
 
-import { Blob, FileReader } from './file-reader.js'
 import { Blob as NodeBlob } from 'buffer'
+import { Blob, FileReader } from './file-reader.js'
 
 class Reader extends FileReader {
   constructor() {

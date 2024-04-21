@@ -3,8 +3,8 @@
  * All Rights Reserved.
  */
 
-import './build/index.cjs'
 import { Blob as NodeBlob } from 'node:buffer'
+import './build/index.mjs'
 
 class Reader extends FileReader {
   constructor() {
