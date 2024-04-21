@@ -72,7 +72,7 @@ export default {
     new webpack.BannerPlugin({
       raw: true,
       banner:
-        "import { createRequire as topLevelCreateRequire } from 'module';\nconst require = topLevelCreateRequire(import.meta.url);",
+        "import { createRequire as topLevelCreateRequire } from 'module';\n if(!global.require) global.require = topLevelCreateRequire(import.meta.url);",
       stage: webpack.Compilation.PROCESS_ASSETS_STAGE_REPORT,
     }),
   ],
